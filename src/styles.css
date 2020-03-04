@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+
+* {margin: 0; padding: 0;}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  float: left;
+  margin: 0 15px 0 0;
+  height: 6rem;
+  width: 4rem;
+}
+ 
+li {
+    width: 50%;
+  list-style-type: none;
+  padding: 10px;
+  overflow: auto;
+}
+ 
+li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+h4 {
+    line-height: 6rem;
+}

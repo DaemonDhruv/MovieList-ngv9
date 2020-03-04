@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
@@ -23,4 +25,4 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export const routingComponents = [];
+
