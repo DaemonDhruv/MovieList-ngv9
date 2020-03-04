@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { httpInterceptorProviders } from './_interceptors/interceptor-barrel';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
