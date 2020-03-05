@@ -13,7 +13,7 @@ export class MovieListComponent implements OnInit {
   public errorMessage = null;
   public imageUrl: string = "";
 
-  constructor(private movieservice: MovieApiService, router:) { }
+  constructor(private movieservice: MovieApiService) { }
 
   ngOnInit(): void {
     this.movieservice.getMovieList()

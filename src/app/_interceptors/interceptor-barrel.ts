@@ -6,5 +6,5 @@ import { InterceptInterceptor } from './intercept.interceptor';
 
 /** Http interceptor providers in outside-in order */
 export const httpInterceptorProviders = [
-     { provide: HTTP_INTERCEPTORS, useClass: InterceptInterceptor, multi: ture },
+     { provide: HTTP_INTERCEPTORS, useClass: InterceptInterceptor, multi: true },
 ];
