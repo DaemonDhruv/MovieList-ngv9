@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, retry } from 'rxjs/operators';
 
 import { IMovie } from '../_interfaces/imovie';
 
@@ -22,11 +22,7 @@ export class MovieApiService {
   getMovieList(): Observable<IMovie> {
     return this.http.get<IMovie>(this._dataUrl)
                     .pipe(
-                      catchError(this.errorHandler)
+                      retry(3)
                     )
-  }
-
-  errorHandler(error: HttpErrorResponse) {
-    return throwError(error.message || 'Server error occured');
   }
 }
